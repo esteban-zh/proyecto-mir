@@ -13,5 +13,8 @@ const carsRoutes = {
 
 router.get(carsRoutes.GET, Car.prototype.getAll);
 router.get(carsRoutes.GET_ONE, Car.prototype.getOne);
+router.post(carsRoutes.CREATE, Car.prototype.create);
+router.put(carsRoutes.UPDATE, Car.prototype.update);
+router.delete(carsRoutes.DELETE, Car.prototype.deleteOne);
 
 export default router;

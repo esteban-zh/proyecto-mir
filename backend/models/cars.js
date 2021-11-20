@@ -3,7 +3,7 @@ import  mongoose  from "mongoose";
 const schema = {
     name: String,
     type: String,
-    capacity: Number,
+    capacity: String,
     price: Number
 };
 
