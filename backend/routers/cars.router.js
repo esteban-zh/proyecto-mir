@@ -3,6 +3,8 @@ import {Car} from "../controllers/index.js";
 
 const router = express.Router();
 
+// import { verifyToken } from "../middlewares/authJwt.js";
+
 const carsRoutes = {
     GET: '/cars',
     GET_ONE: '/cars/:id',
