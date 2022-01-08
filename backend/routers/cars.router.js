@@ -1,9 +1,9 @@
 import express from "express";
 import {Car} from "../controllers/index.js";
+import {authJwt} from "../middlewares/index.js";
 
 const router = express.Router();
 
-// import { verifyToken } from "../middlewares/authJwt.js";
 
 const carsRoutes = {
     GET: '/cars',
@@ -15,8 +15,8 @@ const carsRoutes = {
 
 router.get(carsRoutes.GET, Car.prototype.getAll);
 router.get(carsRoutes.GET_ONE, Car.prototype.getOne);
-router.post(carsRoutes.CREATE, Car.prototype.create);
-router.put(carsRoutes.UPDATE, Car.prototype.update);
-router.delete(carsRoutes.DELETE, Car.prototype.deleteOne);
+router.post(carsRoutes.CREATE , [authJwt.verifyToken, authJwt.isAdmin], Car.prototype.create);
+router.put(carsRoutes.UPDATE, [authJwt.verifyToken, authJwt.isAdmin], Car.prototype.update);
+router.delete(carsRoutes.DELETE, [authJwt.verifyToken, authJwt.isAdmin], Car.prototype.deleteOne);
 
 export default router;

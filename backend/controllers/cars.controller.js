@@ -10,7 +10,6 @@ class Car {
     db.connect();
 
     Cars.find((err, data) => {
-      console.log("find", data);
       if (err) res.status(500).send();
       if (data.length === 0) res.status(204).send();
       res.status(200).send(data);

@@ -20,7 +20,7 @@ const userSchema = new Schema ({
         type: Schema.Types.ObjectId
     }]
 }, {
-    timestamp: true,
+    timestamps: true,
     versionKey: false
 }
 );
