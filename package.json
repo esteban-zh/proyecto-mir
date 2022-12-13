@@ -1,1 +1,23 @@
-{}
+{
+  "dependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "name": "proyecto-mir",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esteban-zh/proyecto-mir.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esteban-zh/proyecto-mir/issues"
+  },
+  "homepage": "https://github.com/esteban-zh/proyecto-mir#readme"
+}
